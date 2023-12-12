@@ -6,4 +6,4 @@ RUN CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -a -tags netgo -ldflags '-w -
 
 FROM scratch
 COPY --from=builder /fwd /fwd
-CMD ["/fwd"]
+ENTRYPOINT ["/fwd"]
